@@ -50,6 +50,24 @@ rm dbeaver-ce_latest_amd64.deb
 echo "Installing FileZilla..."
 sudo apt install -y filezilla
 
+# Install VLC
+echo "Installing VLC..."
+sudo apt install -y vlc
+
+# Install Unity Hub
+echo "Installing Unity Hub..."
+
+# Add the public signing key
+wget -qO - https://hub.unity3d.com/linux/keys/public | gpg --dearmor | sudo tee /usr/share/keyrings/Unity_Technologies_ApS.gpg > /dev/null
+
+# Add the Unity Hub repository
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/Unity_Technologies_ApS.gpg] https://hub.unity3d.com/linux/repos/deb stable main" > /etc/apt/sources.list.d/unityhub.list'
+
+# Update the package cache and install Unity Hub
+sudo apt update
+sudo apt-get install -y unityhub
+
+
 
 # Clean up step
 echo "Cleaning up downloaded .deb files..."
