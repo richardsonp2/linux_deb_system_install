@@ -77,6 +77,10 @@ sudo apt install -y filezilla
 echo "Installing VLC..."
 sudo apt install -y vlc
 
+# These things seem to be necessary for using packages in R, probably useful for other things too
+echo "Installing LAPACK, BLAS, gfortran, and cmake..."
+sudo apt install -y liblapack-dev libblas-dev gfortran cmake
+
 ## R installation
 # Install R and RStudio, keeping r-base-dev for additional development tools (package install etc)
 echo "Installing R and RStudio..."
