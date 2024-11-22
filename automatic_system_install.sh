@@ -74,21 +74,21 @@ echo "***** Installing FileZilla *****"
 sudo apt install -y filezilla
 
 # Install VLC
-echo "Installing VLC **** "
+echo "***** Installing VLC **** "
 sudo apt install -y vlc
 
 # These things seem to be necessary for using packages in R, probably useful for other things too
-echo "Installing LAPACK, BLAS, gfortran, and cmake **** "
+echo "**** Installing LAPACK, BLAS, gfortran, and cmake **** "
 sudo apt install -y liblapack-dev libblas-dev gfortran cmake libudunits2-dev libgdal-dev libproj-dev libgeos-dev libssl-dev libxml2-dev libcurl4-openssl-dev libv8-dev 
 
 
 ## R installation
 # Install R and RStudio, keeping r-base-dev for additional development tools (package install etc)
-echo "Installing R and RStudio **** "
+echo "**** Installing R and RStudio **** "
 sudo apt install r-base r-base-dev
 
 # Install RStudio
-echo "Installing RStudio **** "
+echo "**** Installing RStudio **** "
 wget -q https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.deb
 # Suppress prompts during dpkg installation
 DEBIAN_FRONTEND=noninteractive sudo dpkg -i rstudio-1.4.1717-amd64.deb
@@ -97,10 +97,10 @@ sudo apt-get install -f -y
 # Clean up the .deb file after installation
 rm rstudio-1.4.1717-amd64.deb
 
-echo "R and RStudio installation complete!"
+echo "**** R and RStudio installation complete! ****"
 
 # Install pacakages from included text file
-echo "Installing R packages **** "
+echo "**** Installing R packages ****"
 # Read the package names from the config file
 if [ -f "r_packages.txt" ]; then
   while IFS= read -r package; do
@@ -112,30 +112,30 @@ else
 fi
 
 # Change the theme in RStudio to a dark theme
-echo "Changing RStudio theme to dark **** "
+echo "**** Changing RStudio theme to dark **** "
 mkdir -p ~/.config/rstudio
 
 
-echo "R packages and installation complete!"
+echo "**** R packages and installation complete! ****"
 #R installation complete
 
 # Install LaTeX
-echo "Installing LaTeX **** "
+echo "**** Installing LaTeX **** "
 sudo apt install -y texlive-full
 
 # Install inkscape
-echo "Installing Inkscape **** "
+echo "**** Installing Inkscape **** "
 sudo apt install -y inkscape
 
 # Install imageJ (Fiji)
-echo "Installing ImageJ (Fiji) **** "
+echo "**** Installing ImageJ (Fiji) **** "
 wget -q https://downloads.imagej.net/fiji/latest/fiji-linux64.zip
 unzip fiji-linux64.zip -d /opt/
 rm fiji-linux64.zip
 
 ## Zotero installation
 # Download and install Zotero
-echo "Installing Zotero **** "
+echo "**** Installing Zotero **** "
 wget -q https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64 -O zotero.tar.bz2
 tar -xjf zotero.tar.bz2 -C /opt/
 sudo ln -s /opt/Zotero_linux-x86_64/zotero.desktop /usr/share/applications/zotero.desktop
@@ -145,7 +145,7 @@ rm zotero.tar.bz2
 sudo ln -s /opt/Zotero_linux-x86_64/zotero /usr/local/bin/zotero
 
 # Install Zotero LibreOffice integration
-echo "Installing Zotero LibreOffice integration **** "
+echo "**** Installing Zotero LibreOffice integration **** "
 /opt/Zotero_linux-x86_64/zotero -ZoteroInstall:extension -zoteroOpenURL="http://www.zotero.org/" libreofficeIntegration
 
 # Start and stop LibreOffice to initialize Zotero menu integration
@@ -157,7 +157,7 @@ echo "Zotero installation and LibreOffice integration complete!"
 
 # Conditionally install software based on work_system flag
 if [ "$work_system" = false ]; then
-  echo "Installing entertainment and non-work-related software **** "
+  echo "**** Installing entertainment and non-work-related software **** "
 
 
   # Install Unity Hub
@@ -175,15 +175,15 @@ if [ "$work_system" = false ]; then
 
 
   # Install Steam
-  echo "Installing Steam **** "
+  echo "**** Installing Steam **** "
   sudo apt install -y steam
 
   # Install Lutris
-  echo "Installing Lutris **** "
+  echo "**** Installing Lutris **** "
   sudo add-apt-repository ppa:lutris-team/lutris
 
   # Install cmatrix
-  echo "Installing cmatrix **** "
+  echo "**** Installing cmatrix **** "
   sudo apt install -y cmatrix
   echo "He's beginning to believe **** "
 
