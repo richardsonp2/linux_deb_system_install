@@ -98,7 +98,7 @@ Scientific Tools:
     ImageJ (Fiji)
     Zotero with LibreOffice integration
 
-#### Optional Packages (when --work-system is not specified)
+#### Optional Packages (when `--work-system` is not specified)
 
 - Gaming and Entertainment:
       - Steam
