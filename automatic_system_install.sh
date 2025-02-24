@@ -1,5 +1,8 @@
 #!/bin/bash
 
+##### NOTE #####
+# Dotfiles are controlled via a seperate repo: https://github.com/richardsonp2/dotfiles
+
 
 # Define variables for optional installations
 work_system=false  # default is false, installs packages such as steam for games, set to true for work system setup
@@ -110,11 +113,6 @@ if [ -f "r_packages.txt" ]; then
 else
   echo "Config file 'r_packages.txt' not found."
 fi
-
-# Change the theme in RStudio to a dark theme
-echo "**** Changing RStudio theme to dark **** "
-mkdir -p ~/.config/rstudio
-
 
 echo "**** R packages and installation complete! ****"
 #R installation complete
