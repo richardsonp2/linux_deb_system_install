@@ -9,8 +9,7 @@ work_system=true  # default is true, does not install packages such as steam for
 
 # Generate an output folder for error and output logs, add the date and time to the folder name 
 output_folder="output_logs_$(date +'%Y-%m-%d_%H-%M')"
-
-
+mkdir -p "$output_folder"
 
 # Parse command-line arguments
 for arg in "$@"; do
@@ -26,7 +25,7 @@ done
 
 
 #Update and upgrade the system
-sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y 2>&1 | tee "$output_folder/update_upgrade.log"
 
 # Install common software
 sudo apt install -y git curl wget
@@ -78,7 +77,7 @@ sudo apt install -y blender
 wget -q https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 sudo dpkg -i dbeaver-ce_latest_amd64.deb
 sudo apt-get install -f -y
-rm dbeaver-ce_latest_amd64.deb
+rm -f dbeaver-ce_latest_amd64.deb
 
 # Install filezilla
 echo "***** Installing FileZilla *****"
@@ -113,13 +112,13 @@ echo "**** R and RStudio installation complete! ****"
 # Install pacakages from included text file
 echo "**** Installing R packages ****"
 # Read the package names from the config file
-if [ -f "merged-r-packages.txt" ]; then
+if [ -f "installed-r-packages.txt" ]; then
   while IFS= read -r package; do
     echo "Installing R package: $package"
     Rscript -e "if (!requireNamespace('$package', quietly=TRUE)) install.packages('$package')"
-  done < "r_packages.txt"
+  done < "installed-r-packages.txt"
 else
-  echo "Config file 'r_packages.txt' not found."
+  echo "Config file 'installed-r-packages.txt' not found."
 fi
 
 echo "**** R packages and installation complete! ****"
@@ -176,7 +175,6 @@ if [ "$work_system" = false ]; then
   sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/Unity_Technologies_ApS.gpg] https://hub.unity3d.com/linux/repos/deb stable main" > /etc/apt/sources.list.d/unityhub.list'
 
   # Update the package cache and install Unity Hub
-  sudo apt update
   sudo apt-get install -y unityhub
 
 
@@ -199,8 +197,6 @@ fi
 
 
 # Clean up step
-echo "Cleaning up downloaded .deb files **** "
-rm -f dbeaver-ce_latest_amd64.deb
 
 echo " **** Clearing the APT cache **** "
 sudo apt-get clean
