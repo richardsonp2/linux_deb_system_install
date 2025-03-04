@@ -5,7 +5,7 @@
 
 
 # Define variables for optional installations
-work_system=false  # default is false, installs packages such as steam for games, set to true for work system setup
+work_system=true  # default is true, does not install packages such as steam for games
 
 # Generate an output folder for error and output logs, add the date and time to the folder name 
 output_folder="output_logs_$(date +'%Y-%m-%d_%H-%M')"
@@ -31,9 +31,8 @@ sudo apt update && sudo apt upgrade -y
 # Install common software
 sudo apt install -y git curl wget
 
-# Install the ability to create venv 
-echo "*****Installing the latest Python 3 and venv module *****"
-sudo apt install -y python3 python3-pip python3-venv
+# Run Python install
+./run_python_install.sh
 
 ## VS Code installation
 # Install Visual Studio Code
@@ -46,20 +45,29 @@ sudo apt install -y code
 
 # List of VSCode extensions to install
 extensions=(
-  ms-python.python
   esbenp.prettier-vscode
-  GitHub.copilot
   ms-vscode.cmake-tools
   ecmel.vscode-html-css
-  ms-toolsai.jupyter
   James-Yu.latex-workshop
+  davidanson.vscode-markdownlint
+  github.copilot
+  github.copilot-chat
+  ms-python.debugpy
+  ms-python.python
+  ms-python.vscode-pylance
+  ms-toolsai.datawrangler
+  ms-toolsai.jupyter
+  ms-toolsai.jupyter-keymap
+  ms-toolsai.jupyter-renderers
+  ms-toolsai.vscode-jupyter-cell-tags
+  ms-toolsai.vscode-jupyter-slideshow
+  yzhang.markdown-all-in-one
 )
 
 for extension in "${extensions[@]}"; do
   echo "Installing $extension **** "
   code --install-extension "$extension"
 done
-
 echo "***** All VSCode extensions have been installed successfully! *****"
 
 # Install Blender
@@ -105,7 +113,7 @@ echo "**** R and RStudio installation complete! ****"
 # Install pacakages from included text file
 echo "**** Installing R packages ****"
 # Read the package names from the config file
-if [ -f "r_packages.txt" ]; then
+if [ -f "merged-r-packages.txt" ]; then
   while IFS= read -r package; do
     echo "Installing R package: $package"
     Rscript -e "if (!requireNamespace('$package', quietly=TRUE)) install.packages('$package')"

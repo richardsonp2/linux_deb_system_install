@@ -1,0 +1,370 @@
+abind
+           abind          askpass        backports        base64enc 
+         "abind"        "askpass"      "backports"      "base64enc" 
+askpass
+backports
+base
+base64enc
+bioacoustics
+    bioacoustics              bit            bit64           bitops 
+  "bioacoustics"            "bit"          "bit64"         "bitops" 
+bit
+bit64
+bitops
+blob
+            blob             brew             brio            broom 
+          "blob"           "brew"           "brio"          "broom" 
+boot
+brew
+brio
+broom
+bslib
+           bslib           cachem            callr              car 
+         "bslib"         "cachem"          "callr"            "car" 
+cachem
+callr
+car
+carData
+         carData       cellranger         classInt              cli 
+       "carData"     "cellranger"       "classInt"            "cli" 
+cellranger
+class
+           class          cluster        codetools         compiler 
+         "class"        "cluster"      "codetools"       "compiler" 
+classInt
+cli
+clipr
+           clipr       colorspace       commonmark     CompQuadForm 
+         "clipr"     "colorspace"     "commonmark"   "CompQuadForm" 
+cluster
+codetools
+colorspace
+commonmark
+compiler
+conflicted
+      conflicted         corrplot          cowplot            cpp11 
+    "conflicted"       "corrplot"        "cowplot"          "cpp11" 
+corrplot
+covr
+cowplot
+cpp11
+crayon
+          crayon      credentials             curl       data.table 
+        "crayon"    "credentials"           "curl"     "data.table" 
+credentials
+curl
+datasets
+        datasets          foreign         graphics        grDevices 
+      "datasets"        "foreign"       "graphics"      "grDevices" 
+data.table
+DBI
+             DBI           dbplyr           deldir            Deriv 
+           "DBI"         "dbplyr"         "deldir"          "Deriv" 
+dbplyr
+Deriv
+desc
+            desc         devtools          dfoptim          diffobj 
+          "desc"       "devtools"        "dfoptim"        "diffobj" 
+devtools
+diffobj
+digest
+          digest             doBy          downlit            dplyr 
+        "digest"           "doBy"        "downlit"          "dplyr" 
+doBy
+downlit
+dplyr
+dtplyr
+          dtplyr              dtw            e1071         ellipsis 
+        "dtplyr"            "dtw"          "e1071"       "ellipsis" 
+dtw
+e1071
+ellipsis
+emmeans
+         emmeans     estimability         evaluate            fansi 
+       "emmeans"   "estimability"       "evaluate"          "fansi" 
+estimability
+evaluate
+fansi
+farver
+          farver          fastmap             fftw      fontawesome 
+        "farver"        "fastmap"           "fftw"    "fontawesome" 
+fastmap
+feather
+fftw
+fontawesome
+forcats
+         forcats          Formula               fs           future 
+       "forcats"        "Formula"             "fs"         "future" 
+foreign
+Formula
+fs
+    future.apply           gargle         generics             gert 
+  "future.apply"         "gargle"       "generics"           "gert" 
+gargle
+generics
+gert
+ggfortify
+       ggfortify          ggplot2           ggpubr          ggrepel 
+     "ggfortify"        "ggplot2"         "ggpubr"        "ggrepel" 
+ggpattern
+ggplot2
+ggpubr
+ggrepel
+ggsci
+           ggsci         ggsignif               gh         gitcreds 
+         "ggsci"       "ggsignif"             "gh"       "gitcreds" 
+ggsignif
+gh
+gitcreds
+glmmTMB
+         glmmTMB          globals             glue      googledrive 
+       "glmmTMB"        "globals"           "glue"    "googledrive" 
+glue
+googledrive
+googlesheets4
+   googlesheets4        gridExtra           gsubfn           gtable 
+ "googlesheets4"      "gridExtra"         "gsubfn"         "gtable" 
+graphics
+grDevices
+grid
+gridExtra
+            grid       KernSmooth          lattice             MASS 
+          "grid"     "KernSmooth"        "lattice"           "MASS" 
+gridpattern
+gsubfn
+gtable
+haven
+           haven            highr              hms           HSAUR3 
+         "haven"          "highr"            "hms"         "HSAUR3" 
+highr
+hms
+htmltools
+       htmltools      htmlwidgets           httpuv             httr 
+     "htmltools"    "htmlwidgets"         "httpuv"           "httr" 
+htmlwidgets
+httpuv
+httr
+httr2
+           httr2              ids              ini          isoband 
+         "httr2"            "ids"            "ini"        "isoband" 
+ids
+ini
+isoband
+            jpeg        jquerylib         jsonlite            knitr 
+          "jpeg"      "jquerylib"       "jsonlite"          "knitr" 
+jquerylib
+jsonlite
+KernSmooth
+knitr
+labeling
+        labeling            later        lifecycle          listenv 
+      "labeling"          "later"      "lifecycle"        "listenv" 
+later
+lattice
+lazyeval
+lifecycle
+lme4
+            lme4         lmerTest              lsr       ltppackage 
+          "lme4"       "lmerTest"            "lsr"     "ltppackage" 
+lmerTest
+lsr
+LTP.analysis
+lubridate
+       lubridate         magrittr         markdown     MatrixModels 
+     "lubridate"       "magrittr"       "markdown"   "MatrixModels" 
+magrittr
+MASS
+Matrix
+          Matrix          methods             mgcv             nlme 
+        "Matrix"        "methods"           "mgcv"           "nlme" 
+MatrixModels
+memoise
+         memoise   microbenchmark             mime           miniUI 
+       "memoise" "microbenchmark"           "mime"         "miniUI" 
+methods
+mgcv
+microbenchmark
+mime
+miniUI
+minqa
+           minqa           mnormt           modelr          moments 
+         "minqa"         "mnormt"         "modelr"        "moments" 
+mockr
+modelr
+moments
+monitoR
+         monitoR          munsell          mvtnorm     NatureSounds 
+       "monitoR"        "munsell"        "mvtnorm"   "NatureSounds" 
+munsell
+mvtnorm
+NatureSounds
+nlme
+nloptr
+          nloptr         numDeriv     nycflights13          officer 
+        "nloptr"       "numDeriv"   "nycflights13"        "officer" 
+nnet
+            nnet         parallel            rpart          spatial 
+          "nnet"       "parallel"          "rpart"        "spatial" 
+numDeriv
+officer
+openssl
+         openssl       parallelly        patchwork          pbapply 
+       "openssl"     "parallelly"      "patchwork"        "pbapply" 
+parallel
+patchwork
+pbapply
+        pbivnorm         pbkrtest           pillar         pkgbuild 
+      "pbivnorm"       "pbkrtest"         "pillar"       "pkgbuild" 
+pbkrtest
+pillar
+pkgbuild
+pkgconfig
+       pkgconfig          pkgdown          pkgload             plyr 
+     "pkgconfig"        "pkgdown"        "pkgload"           "plyr" 
+pkgdown
+pkgload
+png
+             png          polynom           pracma           praise 
+           "png"        "polynom"         "pracma"         "praise" 
+polynom
+praise
+prettyunits
+     prettyunits         processx          profvis         progress 
+   "prettyunits"       "processx"        "profvis"       "progress" 
+processx
+profvis
+progress
+promises
+        promises            proto            proxy               ps 
+      "promises"          "proto"          "proxy"             "ps" 
+proto
+proxy
+ps
+pscl
+            pscl            purrr         quantreg               R6 
+          "pscl"          "purrr"       "quantreg"             "R6" 
+purrr
+pwr
+quantreg
+R6
+ragg
+            ragg         rappdirs        rbibutils        rcmdcheck 
+          "ragg"       "rappdirs"      "rbibutils"      "rcmdcheck" 
+rappdirs
+rcmdcheck
+RColorBrewer
+    RColorBrewer             Rcpp        RcppEigen            RCurl 
+  "RColorBrewer"           "Rcpp"      "RcppEigen"          "RCurl" 
+Rcpp
+RcppEigen
+RCurl
+          Rdpack            readr           readxl       reformulas 
+        "Rdpack"          "readr"         "readxl"     "reformulas" 
+readr
+readxl
+rematch
+rematch2
+         rematch         rematch2          remotes           reprex 
+       "rematch"       "rematch2"        "remotes"         "reprex" 
+remotes
+reprex
+rex
+rjson
+           rjson            rlang        rmarkdown         roxygen2 
+         "rjson"          "rlang"      "rmarkdown"       "roxygen2" 
+rlang
+rmarkdown
+roxygen2
+rpart
+rprojroot
+       rprojroot           Rraven          rstatix       rstudioapi 
+     "rprojroot"         "Rraven"        "rstatix"     "rstudioapi" 
+Rraven
+rstatix
+rstudioapi
+rversions
+       rversions            rvest               s2         sandwich 
+     "rversions"          "rvest"             "s2"       "sandwich" 
+rvest
+s2
+sass
+            sass           scales          seewave          selectr 
+          "sass"         "scales"        "seewave"        "selectr" 
+scales
+seewave
+selectr
+sessioninfo
+     sessioninfo            shiny           signal      sourcetools 
+   "sessioninfo"          "shiny"         "signal"    "sourcetools" 
+sf
+shiny
+signal
+sourcetools
+SparseM
+         SparseM          statmod          stringi          stringr 
+       "SparseM"        "statmod"        "stringi"        "stringr" 
+spatial
+splines
+         splines            stats           stats4         survival 
+       "splines"          "stats"         "stats4"       "survival" 
+stats
+stats4
+stringi
+stringr
+survival
+svglite
+         svglite              sys      systemfonts         testthat 
+       "svglite"            "sys"    "systemfonts"       "testthat" 
+sys
+systemfonts
+tcltk
+           tcltk            tools            utils 
+         "tcltk"          "tools"          "utils" 
+testthat
+textshaping
+     textshaping           tibble            tidyr       tidyselect 
+   "textshaping"         "tibble"          "tidyr"     "tidyselect" 
+tibble
+tidyr
+tidyselect
+tidyverse
+       tidyverse       timechange          tinytex              TMB 
+     "tidyverse"     "timechange"        "tinytex"            "TMB" 
+timechange
+tinytex
+TMB
+tools
+tuneR
+           tuneR             tzdb            units       urlchecker 
+         "tuneR"           "tzdb"          "units"     "urlchecker" 
+tzdb
+units
+urlchecker
+usethis
+         usethis             utf8             uuid            vctrs 
+       "usethis"           "utf8"           "uuid"          "vctrs" 
+utf8
+utils
+uuid
+vctrs
+viridisLite
+     viridisLite            vroom            waldo          warbleR 
+   "viridisLite"          "vroom"          "waldo"        "warbleR" 
+vroom
+waldo
+warbleR
+whisker
+         whisker            withr               wk             xfun 
+       "whisker"          "withr"             "wk"           "xfun" 
+withr
+wk
+xfun
+xml2
+            xml2            xopen           xtable             yaml 
+          "xml2"          "xopen"         "xtable"           "yaml" 
+xopen
+xtable
+yaml
+zip
+             zip              zoo             base             boot 
+           "zip"            "zoo"           "base"           "boot" 
