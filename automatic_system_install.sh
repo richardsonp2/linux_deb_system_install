@@ -88,14 +88,47 @@ echo "***** Installing VLC **** "
 sudo apt install -y vlc
 
 # Install obsidian
-#echo "**** Installing Obsidian **** "
-#wget -q https://obsidian.md/download 
+echo "**** Installing Obsidian **** "
 
+# Fetch the latest release info from GitHub
+latest_url=$(curl -s https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest | grep "browser_download_url.*amd64.deb" | cut -d '"' -f 4)
+wget "$latest_url" -O obsidian_latest.deb
+# Install the package
+sudo dpkg -i obsidian_latest.deb
+
+echo "**** Obsidian installation complete! ****"
+
+# Install virtualbox
+echo "**** Installing VirtualBox **** "
+sudo apt install -y virtualbox
+
+echo "**** VirtualBox installation complete! ****"
 
 # These things seem to be necessary for using packages in R, probably useful for other things too
-echo "**** Installing LAPACK, BLAS, gfortran, and cmake **** "
-sudo apt install -y libclang-dev liblapack-dev libblas-dev gfortran cmake libudunits2-dev libgdal-dev libproj-dev libgeos-dev libssl-dev libxml2-dev libcurl4-openssl-dev libv8-dev libssl1.0.0 libssl1.0.2 libssl1.1
+echo "**** Installing packages that will be needed for R libraries  **** "
+useful_r_dependencies=(
+  libclang-dev
+  liblapack-dev
+  libblas-dev
+  gfortran
+  cmake
+  libudunits2-dev
+  libgdal-dev
+  libproj-dev
+  libgeos-dev
+  libssl-dev
+  libxml2-dev
+  libcurl4-openssl-dev
+  libv8-dev
+  libssl1.0.0
+  libssl1.0.2
+  libssl1.1
+  libfontconfig1-dev
+  libharfbuzz-dev
+  libfribidi-dev
+)
 
+sudo apt install -y "${useful_r_dependencies[@]}"
 
 ## R installation
 # Install R and RStudio, keeping r-base-dev for additional development tools (package install etc)
