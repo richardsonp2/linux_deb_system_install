@@ -31,7 +31,7 @@ sudo apt update && sudo apt upgrade -y 2>&1 | tee "$output_folder/update_upgrade
 sudo apt install -y git curl wget
 
 # Run Python install
-./run_python_install.sh
+./install_python.sh
 
 ## VS Code installation
 # Install Visual Studio Code
