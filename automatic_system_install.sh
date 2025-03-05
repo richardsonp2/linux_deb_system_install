@@ -87,25 +87,30 @@ sudo apt install -y filezilla
 echo "***** Installing VLC **** "
 sudo apt install -y vlc
 
+# Install obsidian
+#echo "**** Installing Obsidian **** "
+#wget -q https://obsidian.md/download 
+
+
 # These things seem to be necessary for using packages in R, probably useful for other things too
 echo "**** Installing LAPACK, BLAS, gfortran, and cmake **** "
-sudo apt install -y liblapack-dev libblas-dev gfortran cmake libudunits2-dev libgdal-dev libproj-dev libgeos-dev libssl-dev libxml2-dev libcurl4-openssl-dev libv8-dev 
+sudo apt install -y libclang-dev liblapack-dev libblas-dev gfortran cmake libudunits2-dev libgdal-dev libproj-dev libgeos-dev libssl-dev libxml2-dev libcurl4-openssl-dev libv8-dev libssl1.0.0 libssl1.0.2 libssl1.1
 
 
 ## R installation
 # Install R and RStudio, keeping r-base-dev for additional development tools (package install etc)
 echo "**** Installing R and RStudio **** "
-sudo apt install r-base r-base-dev
+sudo apt install -y r-base r-base-dev
 
 # Install RStudio
 echo "**** Installing RStudio **** "
-wget -q https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.deb
+wget -q wget -q https://download1.rstudio.org/desktop/bionic/amd64/rstudio-latest-amd64.deb -O rstudio.deb
 # Suppress prompts during dpkg installation
 DEBIAN_FRONTEND=noninteractive sudo dpkg -i rstudio-1.4.1717-amd64.deb
 # Automatically fix dependencies without confirmation
 sudo apt-get install -f -y
 # Clean up the .deb file after installation
-rm rstudio-1.4.1717-amd64.deb
+rm rstudio.deb
 
 echo "**** R and RStudio installation complete! ****"
 
