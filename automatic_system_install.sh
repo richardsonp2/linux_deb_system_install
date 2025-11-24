@@ -179,9 +179,9 @@ rm fiji-linux64.zip
 ## Zotero installation
 # Download and install Zotero
 echo "**** Installing Zotero **** "
-wget -q https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64 -O zotero.tar.bz2
-tar -xjf zotero.tar.bz2 -C /opt/
-sudo ln -s /opt/Zotero_linux-x86_64/zotero.desktop /usr/share/applications/zotero.desktop
+wget -q --content-disposition "https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64" -O zotero.tar.bz2
+sudo tar -xjf zotero.tar.bz2 -C /opt/
+sudo ln -sf /opt/Zotero_linux-x86_64/zotero.desktop /usr/share/applications/zotero.desktop
 rm zotero.tar.bz2
 
 # Add Zotero to the PATH
